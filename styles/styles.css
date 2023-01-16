@@ -102,6 +102,11 @@ a:focus {
     font-size: 12px;
 }
 
+.hint {
+    color: #A2A3A7;
+    font-size: 14px;
+}
+
 /* orser-list */
 
 .main-wrapper {
