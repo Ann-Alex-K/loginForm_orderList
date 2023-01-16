@@ -40,8 +40,8 @@ function hint() {
     hintBox.classList.add('user-data');
 
     const addHtml = `
-                <p>log: admin@example.com <br> pas: admin </p>
-                <p>log: manager@example.com <br> pas: manager </p>
+                <p>log: admin@example.com<br> pas: admin</p>
+                <p>log: manager@example.com<br> pas: manager</p>
     `
 
     hintBox.innerHTML += addHtml;
