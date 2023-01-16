@@ -1,0 +1,25 @@
+@media only screen and (max-width: 620px) {
+    .open-dropdown-menu {
+        padding: 7px 0 0 4px;
+        font-size: 14px;
+        width: 170px;
+    }
+
+    .order-header>h1 {
+        font-weight: 700;
+        font-size: 26px;
+    }
+
+    .open-dropdown-menu>img {
+        margin: 7.24px 11.64px 0 5.11px;
+    }
+
+    .dropdown-content {
+        max-width: 140px;
+    }
+    
+    .dropdown-content a {
+        padding: 4px 8px;
+        font-size: 14px;
+    }
+}

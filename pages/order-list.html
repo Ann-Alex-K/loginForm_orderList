@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../styles/adaptive.css">
+    <script src="../src/userPage.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&family=Montserrat&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="main-wrapper">
+        <header>
+            <div class="user-wrapper"></div>
+
+            <div class="logout">
+                <button onclick="logout()">Выход</button>
+            </div>
+        </header>
+
+        <div class="order-wrapper">
+            <div class="order-header">
+                <h1>Заказы</h1>
+
+                <div class="dropdown-menu">
+                    <div class="open-dropdown-menu">
+                        <span class="dropdown-toggle">Сортировка</span>
+                        <img src="assets/Polygon 1.png">
+                    </div>
+                    <div class="dropdown-content">
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" data-type="1">По номеру заказа</a>
+                            </li>
+                            <li><a class="dropdown-item" href="#" data-type="2">По email</a></li>
+                            <li><a class="dropdown-item" href="#" data-type="3">По сумме</a></li>
+                            <li><a class="dropdown-item" href="#" data-type="4">По дате</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="order-list-wrapper">
+
+                <div class="order-list-wrapper-header">
+                    <span>Номер заказа</span>
+                    <span>Email</span>
+                    <span>Сумма</span>
+                    <span>Дата</span>
+                </div>
+
+                <div class="order-list-wrapper-body"></div>
+
+                <div class="btn">
+                    <button class="btnMore" onclick="addMore()">Показать еще...</button>
+                </div>
+            </div>
+            
+        </div>
+
+</body>
+
+</html>
