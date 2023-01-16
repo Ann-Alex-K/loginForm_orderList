@@ -9,10 +9,6 @@
         width: 343px;
     }
     
-    input::placeholder {
-        font-size: 24px;
-    }
-    
     .form button {
         width: 343px;
     }
