@@ -23,6 +23,7 @@ body {
     text-align: center;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
+    transition: all 0.3s;
 }
 
 .form input {
@@ -42,6 +43,7 @@ body {
     font-size: 24px;
     line-height: 29px;
     color: #969697;
+    transition: all 0.3s;
 }
 
 input::placeholder {
@@ -65,7 +67,7 @@ input::placeholder {
     font-size: 32px;
     line-height: 39px;
     -webkit-transition: all 0.3 ease;
-    transition: all 0.3 ease;
+    transition: all 0.3s;
     cursor: pointer;
 }
 
@@ -201,7 +203,7 @@ a:focus {
     font-size: 32px;
     line-height: 39px;
     color: #000000;
-    transition: 0.3s;
+    transition: all 0.3s;
 }
 
 /* dropdown-menu */
@@ -221,7 +223,7 @@ ul {
     border: 1px solid #ECEAEA;
     border-radius: 10px;
     color: #595959;
-    transition: 0.3s;
+    transition: all 0.3s;
     padding: 7px 0 0 27px;
 }
 
@@ -325,7 +327,7 @@ ul {
     font-size: 16px;
     line-height: 19px;
     text-align: center;
-    transition: 0.3s;
+    transition: all 0.3s;
     color: #595959;
     cursor: pointer;
 }
