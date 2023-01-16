@@ -5,11 +5,11 @@
         box-shadow: none;
         margin: auto;
     }
-    
+
     .form input {
         width: 343px;
     }
-    
+
     .form button {
         width: 343px;
     }
@@ -36,9 +36,15 @@
     .dropdown-content {
         max-width: 140px;
     }
-    
+
     .dropdown-content a {
         padding: 4px 8px;
         font-size: 14px;
     }
+
+    .order-list-wrapper-header>span {
+        flex-basis: auto;
+        padding: 10px 10px 10px 0px;
+    }
+
 }

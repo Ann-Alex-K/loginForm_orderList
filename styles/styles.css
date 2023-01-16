@@ -282,11 +282,27 @@ ul {
 }
 
 .order-list-wrapper-header>span {
-    padding: 10px 0 10px 10px;
+    padding: 10px 10px 10px 10px;
     font-weight: 700;
     font-size: 14px;
     line-height: 17px;
     color: #000000;
+}
+
+.id {
+    flex-basis: 10em;
+}
+
+.email {
+    flex-basis: 10em;
+}
+
+.amount {
+    flex-basis: 8em;
+}
+
+.date {
+    flex-basis: 7em;
 }
 
 .list-items {
