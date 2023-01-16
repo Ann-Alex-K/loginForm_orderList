@@ -99,12 +99,7 @@ a:focus {
 
 .user-data>p {
     color: #A2A3A7;
-    font-size: 10px;
-}
-
-.hint {
-    color: #A2A3A7;
-    font-size: 10px;
+    font-size: 12px;
 }
 
 /* orser-list */
