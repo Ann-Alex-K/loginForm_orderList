@@ -8,6 +8,8 @@ https://ann-alex-k.github.io/loginForm_orderList/
 
 Registration form for entering the orders page;
 
+Adapted for mobile devices;
+
 Downloading data from the server;
 
 Sorting orders;
