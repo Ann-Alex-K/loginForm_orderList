@@ -11,7 +11,7 @@ async function fetchUsers() {
         `https://my-json-server.typicode.com/Ann-Alex-K/demo/users`
     );
     if (response.status != 200) {
-        console.log('error')
+        console.log('error');
     } else {
         users = await response.json();
     }

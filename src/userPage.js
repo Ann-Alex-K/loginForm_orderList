@@ -1,67 +1,68 @@
 window.onload = () => {
     renderUser();
+    renderSpinner();
     fetchOrders();
 
     // --- dropdown menu logic --- //
     let dropdownTitle = document.querySelector('.dropdown-toggle');
-        document.querySelectorAll('.dropdown-item').forEach(e => {
-            e.addEventListener('click', e => {
-                const menu = e.currentTarget.dataset.type
-                if (menu === '1') {
-                    dropdownTitle.textContent = 'По номеру заказа';
-                    const sortById = orders.sort(function (a, b) {
-                        if (b.id < a.id) {
-                            return -1;
-                        }
-                        if (b.id > a.id) {
-                            return 1;
-                        }
-                        return 0;
-                    });
-                    sortById.reverse();
-                    renderOrders(sortById);
-                }
-                if (menu === '2') {
-                    dropdownTitle.textContent = 'По email';
-                    const sortByEmail = orders.sort(function (a, b) {
-                        if (b.email < a.email) {
-                            return -1;
-                        }
-                        if (b.email > a.email) {
-                            return 1;
-                        }
-                        return 0;
-                    });
-                    renderOrders(sortByEmail);
-                }
-                if (menu === '3') {
-                    dropdownTitle.textContent = 'По сумме';
-                    const sortByAmount = orders.sort(function (a, b) {
-                        if (b.amount < a.amount) {
-                            return -1;
-                        }
-                        if (b.amount > a.amount) {
-                            return 1;
-                        }
-                        return 0;
-                    });
-                    renderOrders(sortByAmount);
-                }
-                if (menu === '4') {
-                    dropdownTitle.textContent = 'По дате';
-                    const sortByDate = orders.sort(function (a, b) {
-                        if (b.date < a.date) {
-                            return -1;
-                        }
-                        if (b.date > a.date) {
-                            return 1;
-                        }
-                        return 0;
-                    });
-                    renderOrders(sortByDate);
-                }
-            })
+    document.querySelectorAll('.dropdown-item').forEach(e => {
+        e.addEventListener('click', e => {
+            const menu = e.currentTarget.dataset.type
+            if (menu === '1') {
+                dropdownTitle.textContent = 'По номеру заказа';
+                const sortById = orders.sort(function (a, b) {
+                    if (b.id < a.id) {
+                        return -1;
+                    }
+                    if (b.id > a.id) {
+                        return 1;
+                    }
+                    return 0;
+                });
+                sortById.reverse();
+                renderOrders(sortById);
+            }
+            if (menu === '2') {
+                dropdownTitle.textContent = 'По email';
+                const sortByEmail = orders.sort(function (a, b) {
+                    if (b.email < a.email) {
+                        return -1;
+                    }
+                    if (b.email > a.email) {
+                        return 1;
+                    }
+                    return 0;
+                });
+                renderOrders(sortByEmail);
+            }
+            if (menu === '3') {
+                dropdownTitle.textContent = 'По сумме';
+                const sortByAmount = orders.sort(function (a, b) {
+                    if (b.amount < a.amount) {
+                        return -1;
+                    }
+                    if (b.amount > a.amount) {
+                        return 1;
+                    }
+                    return 0;
+                });
+                renderOrders(sortByAmount);
+            }
+            if (menu === '4') {
+                dropdownTitle.textContent = 'По дате';
+                const sortByDate = orders.sort(function (a, b) {
+                    if (b.date < a.date) {
+                        return -1;
+                    }
+                    if (b.date > a.date) {
+                        return 1;
+                    }
+                    return 0;
+                });
+                renderOrders(sortByDate);
+            }
         })
+    })
 }
 
 
@@ -75,7 +76,7 @@ async function fetchOrders() {
         `https://my-json-server.typicode.com/Ann-Alex-K/demo/orders`
     );
     if (response.status != 200) {
-        console.log('error')
+        console.log('error');
     } else {
         orders = await response.json();
         renderOrders(orders);
@@ -87,7 +88,7 @@ function renderUser() {
     const userWrapper = document.querySelector('.user-wrapper');
 
     const userBox = document.createElement('div');
-    userBox.classList.add('user-box')
+    userBox.classList.add('user-box');
     user = JSON.parse(localStorage.getItem('user'));
 
     const addHtml = `
@@ -109,8 +110,8 @@ function renderUser() {
 function renderOrders(list) {
     const orderWrapper = document.querySelector('.order-list-wrapper-body');
     orderWrapper.innerHTML = '';
+    //rendering of the first 5 displayed orders
     for (let i = 0; i < 5; i++) {
-
         const listItem = document.createElement('div');
         listItem.classList.add('list-items');
 
@@ -123,7 +124,7 @@ function renderOrders(list) {
         listItem.innerHTML += addHtml;
         orderWrapper.appendChild(listItem);
     }
-
+    //rendering of hidden orders
     for (let i = 5; i < list.length; i++) {
         const listItem = document.createElement('div');
         listItem.classList.add('hidden');
@@ -137,7 +138,13 @@ function renderOrders(list) {
         listItem.innerHTML += addHtml;
         orderWrapper.appendChild(listItem);
     }
+}
 
+function renderSpinner() {
+    const spinnerBox = document.querySelector('.spinner-wrapper');
+    const spinner = document.createElement('div')
+    spinner.classList.add('spinner');
+    spinnerBox.appendChild(spinner);
 }
 
 //--- show hidden orders ---//

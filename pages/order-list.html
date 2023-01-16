@@ -21,7 +21,6 @@
     <div class="main-wrapper">
         <header>
             <div class="user-wrapper"></div>
-
             <div class="logout">
                 <button onclick="logout()">Выход</button>
             </div>
@@ -30,7 +29,6 @@
         <div class="order-wrapper">
             <div class="order-header">
                 <h1>Заказы</h1>
-
                 <div class="dropdown-menu">
                     <div class="open-dropdown-menu">
                         <span class="dropdown-toggle">Сортировка</span>
@@ -49,23 +47,20 @@
             </div>
 
             <div class="order-list-wrapper">
-
                 <div class="order-list-wrapper-header">
                     <span>Номер заказа</span>
                     <span>Email</span>
                     <span>Сумма</span>
                     <span>Дата</span>
                 </div>
-
-                <div class="order-list-wrapper-body"></div>
-
+                <div class="order-list-wrapper-body">
+                    <div class="spinner-wrapper"></div>
+                </div>
                 <div class="btn">
                     <button class="btnMore" onclick="addMore()">Показать еще...</button>
                 </div>
             </div>
-            
         </div>
 
 </body>
-
 </html>
